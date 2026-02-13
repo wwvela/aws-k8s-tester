@@ -19,6 +19,8 @@ var (
 )
 
 func TestMain(m *testing.M) {
+
+	log.console()
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer cancel()
 	cfg, err := envconf.NewFromFlags()

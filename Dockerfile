@@ -54,3 +54,5 @@ RUN cp kubernetes-version.txt /info/
 RUN mv kubernetes/*/bin/* /bin/
 RUN rm -rf /workdir
 COPY --from=builder /usr/local/go/bin/* /bin/
+
+ENV PATH=$PATH:/info
